@@ -2,8 +2,24 @@
 
 A Survey SDK for your Android applications.
 
+## Implementation
+
+Download repo as zip file. Extract and move **symetricx** folder to your **app** module. Write implementation in **build.gradle** file:
+```
+dependencies {
+    implementation fileTree(dir: 'symetricx', include: ['*.aar', '*.jar'])
+}
+```
+**NOTE:** symetricx.aar library is depended other .aar and .jar files. Also it is using Android's default dependencies:
+
+```
+implementation 'androidx.core:core-ktx:1.10.1'
+implementation 'androidx.appcompat:appcompat:1.6.1'
+implementation 'com.google.android.material:material:1.9.0'
+```
+Please **do not remove** these implementations. If you already implement other .aar or .jar libraries (gson, lifecycle-viewmodel-ktx etc.) as dependency in gradle. You can remove from **symetricx** folder to avoid **duplication**.
+
 ## Usage
-### Initialization
 
 For the initialization, add this method in **onCreate()** method in your Application class.
 
@@ -46,7 +62,7 @@ Symetricx.showSurvey(
 )
 ```
 
-SurveyUi object with optional UI parameters:
+SurveyUi, ShowType, SurveySize object with optional UI parameters:
 
 ```
 data class SurveyUi(
