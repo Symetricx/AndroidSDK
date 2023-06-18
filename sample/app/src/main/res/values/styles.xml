@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Manrope.SemiBold" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/manrope_semi_bold</item>
+    </style>
+    <style name="Manrope.SemiBold.14" parent="Manrope.SemiBold">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Manrope.SemiBold.14.Dark_Gray" parent="Manrope.SemiBold.14">
+        <item name="android:textColor">#2B2F44</item>
+    </style>
+
+    <style name="Manrope.SemiBold.14.Dark_Gray_Center" parent="Manrope.SemiBold.14.Dark_Gray">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Manrope.SemiBold.14.Light_Gray" parent="Manrope.SemiBold.14">
+        <item name="android:textColor">#3F4462</item>
+    </style>
+
+    <style name="Manrope.Bold" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/manrope_bold</item>
+    </style>
+
+    <style name="Manrope.Bold.12" parent="Manrope.Bold">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Manrope.Bold.12.Light_Gray" parent="Manrope.Bold.12">
+        <item name="android:textColor">#3F4462</item>
+    </style>
+
+</resources>
