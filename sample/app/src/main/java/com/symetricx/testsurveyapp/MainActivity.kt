@@ -6,8 +6,8 @@ import androidx.appcompat.widget.AppCompatButton
 import com.symetricx.survey.Symetricx
 import com.symetricx.survey.data.ShowType
 import com.symetricx.survey.data.SurveyButton
+import com.symetricx.survey.data.SurveyOption
 import com.symetricx.survey.data.SurveySize
-import com.symetricx.survey.data.SurveyUi
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,13 +20,11 @@ class MainActivity : AppCompatActivity() {
             languageShortCode = "tr"
         )
 
-        Symetricx.setCustomerId(10)
-
         findViewById<AppCompatButton>(R.id.buttonStartSurvey).setOnClickListener {
             Symetricx.showSurvey(
                 fragmentManager = supportFragmentManager,
                 surveyId = SURVEY_ID,
-                surveyUi = SurveyUi(
+                surveyOption = SurveyOption(
                     surveyTitle = "Symetricx Survey",
                     surveyTitleTextAppearance = R.style.Manrope_SemiBold_14_Dark_Gray,
                     backgroundRes = android.R.color.background_light,
@@ -56,7 +54,13 @@ class MainActivity : AppCompatActivity() {
                     loadingProgressTextAppearanceRes = R.style.Manrope_Bold_12_Light_Gray
                 ),
                 showType = ShowType.Dialog,
-                surveySize = SurveySize(Symetricx.MATCH_PARENT, Symetricx.WRAP_CONTENT)
+                surveySize = SurveySize(Symetricx.MATCH_PARENT, Symetricx.WRAP_CONTENT),
+                customerId = 10,
+                customerGuid = "customer_guid",
+                city = "Istanbul",
+                mobilePhone = "1234",
+                processNo = 1,
+                processType = "process_type"
             )
         }
     }

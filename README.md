@@ -50,7 +50,7 @@ After the initialization, you can show a survey dialog with UI customizations by
 Symetricx.showSurvey(
     fragmentManager: FragmentManager,
     surveyId: Int,
-    surveyUi: SurveyUi,
+    surveyOption: SurveyOption,
     showType: ShowType,
     surveySize: SurveySize,
     customerId: Int, // Optional
