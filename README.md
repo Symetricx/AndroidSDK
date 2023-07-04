@@ -36,13 +36,7 @@ class MyApplication: Application() {
 }
 ```
 
-You can set a **customerId** for tracking a specific customer on your admin panel.
-
-```
-Symetricx.setCustomerId(customerId: Int)
-```
-
-Also you can update **languageShortCode**.
+You can update **languageShortCode**.
 
 ```
 Symetricx.updateLanguageShortCode("en")
@@ -58,14 +52,20 @@ Symetricx.showSurvey(
     surveyId: Int,
     surveyUi: SurveyUi,
     showType: ShowType,
-    surveySize: SurveySize
+    surveySize: SurveySize,
+    customerId: Int, // Optional
+    customerGuid: String, // Optional
+    city: String, // Optional
+    mobilePhone: String, // Optional
+    processNo: Int, // Optional
+    processType: String // Optional
 )
 ```
 
 SurveyUi, ShowType, SurveySize object with optional UI parameters:
 
 ```
-data class SurveyUi(
+data class SurveyOption(
     val backgroundRes: Int,
     val stepTextAppearance: Int,
     val questionTextAppearance: Int,
